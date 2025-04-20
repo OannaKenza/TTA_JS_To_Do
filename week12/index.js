@@ -77,13 +77,13 @@ function displayTaskDetail(task){
 
 let task1 = createTask("Buy groceries", "Get milk,eggs and bread", "Shopping");
 console.log("+-----------------------------------------------------------------+");
-task1.displayTaskDetails(task1);
+displayTaskDetail(task1);
 console.log("+-----------------------------------------------------------------+");
 
 let task2 = createWorkTask("Finish project", "Complete the final report", "friday");
 console.log("Work related task");
 console.log("+-----------------------------------------------------------------+");
-task2.displayTaskDetails(task2);
+displayTaskDetail(task2);
 console.log("+-----------------------------------------------------------------+");
 
 task2.toggleCompleted();
@@ -94,10 +94,19 @@ console.log("+-----------------------------------------------------------------+
 let task3 = createPersonalTask("Go to gym", "Workout for 1 hour", "High");
 console.log("Personal related task");
 console.log("+-----------------------------------------------------------------+");
-task3.displayTaskDetails(task3);
+displayTaskDetail(task3);
 console.log("+-----------------------------------------------------------------+");
 
 task3.toggleCompleted();
 console.log("+-----------------------------------------------------------------+");
 task3.displayDetails();
+console.log("+-----------------------------------------------------------------+");
+
+let tasks = [task1, task2, task3];
+console.log("All tasks");
+console.log("+-----------------------------------------------------------------+");
+tasks.forEach(task => {
+    task.displayDetails(task);
+    console.log("\n")
+});
 console.log("+-----------------------------------------------------------------+");
